@@ -12,12 +12,21 @@
 </head>
 <body>
   <div class="container">
-    <h1>ToDo List</h1>
-    <input type="text" id="taskInput" placeholder="Введите новое дело...">
-    <button id="addButton">Add</button>
-
+    <h1>Список задач</h1>
+    <h2>Ваши задачи:</h2>
+    <ul id="todo-list">
+       
+    </ul>
+    <input type="text" id="taskInput" placeholder="Добавить новую задачу" />
+    <button id="addButton">Добавить</button>
     <button id="clearButton">Удалить все</button>
-    <ul id="taskList"></ul>
+    <script>
+    function removeTask(button) {
+        // Находим родительский элемент списка и удаляем его
+        const taskItem = button.parentElement;
+        taskItem.remove();
+    }
+    </script>
   </div>
 
   
